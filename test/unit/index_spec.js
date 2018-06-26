@@ -80,5 +80,15 @@ describe('HolidayAPI', function () {
           done();
         });
     });
+    it('should handle invalid api key', (done) => {
+      HOLIDAY_WITH_KEY.v1.holidays({key:'invalidkey'})
+        .then(apiResponse => {
+          done(new Error('Should throw an api response error'));
+        })
+        .catch(e => {
+          expect(e).to.not.be.empty;
+          done();
+        });
+    });
   });
 });
