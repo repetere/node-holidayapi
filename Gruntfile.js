@@ -6,7 +6,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     mocha_istanbul: {
       coveralls: {
-        src: testPaths, // multiple folders also works
+        src: [testPaths,'index.js'], // multiple folders also works
         options: {
           coverageFolder: 'coverage', // will check both coverage folders and merge the coverage results
           coverage: true, // this will make the grunt.event.on('coverage') event listener to be triggered
@@ -66,7 +66,7 @@ module.exports = function(grunt) {
     },
     jsdoc: {
       dist: {
-        src: ['src/*.js', 'README.md', ],
+        src: ['index.js', 'README.md', ],
         options: {
           destination: 'docs',
         },
