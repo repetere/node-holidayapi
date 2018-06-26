@@ -1,19 +1,21 @@
 # node-holidayapi
-Official Node.js library for [Holiday API](https://holidayapi.com)
+[![Coverage Status](https://coveralls.io/repos/github/repetere/node-holidayapi/badge.svg?branch=master)](https://coveralls.io/github/repetere/node-holidayapi?branch=master) [![Build Status](https://travis-ci.org/repetere/node-holidayapi.svg?branch=master)](https://travis-ci.org/repetere/node-holidayapi)
+
+Node.js library for [Holiday API](https://holidayapi.com)
 
 ## Installation
 
 ```shell
-npm install --save node-holidayapi
+npm install --save @repetere/node-holidayapi
 ```
 
 ## Usage
 
 ```javascript
-var HolidayAPI = require('node-holidayapi');
-var hapi = new HolidayAPI('_YOUR_API_KEY_').v1;
+const HolidayAPI = require('node-holidayapi');
+const hapi = new HolidayAPI('_YOUR_API_KEY_').v1;
 
-var parameters = {
+const parameters = {
   // Required
   country: 'US',
   year:    2016,
@@ -26,8 +28,41 @@ var parameters = {
   // pretty:   true,
 };
 
-hapi.holidays(parameters, function (err, data) {
-  // Insert awesome code here...
-});
+hapi.holidays(parameters)
+  .then(data=>{
+    // Insert awesome code here...
+  })
+  .catch(error=>{
+    //handle errors
+  });
 ```
 
+### Development
+
+*Make sure you have grunt installed*
+
+```sh
+$ npm i -g grunt-cli jsdoc-to-markdown
+```
+
+For generating documentation
+```sh
+$ grunt doc
+$ jsdoc2md index.js  > docs/api.md
+```
+
+### Testing
+
+```sh
+$ npm i
+$ grunt test
+```
+
+### Contributing
+
+Fork, write tests and create a pull request!
+
+
+### Notes
+
+Check out [https://github.com/repetere/node-holidayapi/blob/master/docs/api.md](https://github.com/repetere/node-holidayapi/blob/master/docs/api.md) for the full node holiday api Documentation
