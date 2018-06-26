@@ -71,12 +71,12 @@ class HolidayAPI {
   }
 }
 
-// /** 
-//  * @static {Object} v1 - Version 1 of the holiday api
-//  * @memberOf HolidayAPI
-// */
-// HolidayAPI.v1 = {
-//   holidays,
-// };
+/** 
+ * @static {Object} v1 - Version 1 of the holiday api
+ * @memberOf HolidayAPI
+*/
+HolidayAPI.v1 = {
+  holidays,
+};
 
 module.exports = HolidayAPI;

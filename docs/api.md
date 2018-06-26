@@ -24,6 +24,11 @@
 | this.key | <code>String</code> | API Key for holidayapi.com |
 | this.v1 | <code>Object</code> | api methods for v1 |
 
+
+* [HolidayAPI](#HolidayAPI)
+    * [new HolidayAPI()](#new_HolidayAPI_new)
+    * [.v1](#HolidayAPI.v1)
+
 <a name="new_HolidayAPI_new"></a>
 
 ### new HolidayAPI()
@@ -34,6 +39,10 @@ class for querying the holiday api
 | --- | --- | --- |
 | options.key | <code>String</code> | API Key |
 
+<a name="HolidayAPI.v1"></a>
+
+### HolidayAPI.v1
+**Kind**: static property of [<code>HolidayAPI</code>](#HolidayAPI)  
 <a name="holidays"></a>
 
 ## holidays() ⇒ <code>Promise</code>
